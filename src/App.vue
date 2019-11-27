@@ -1,18 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <input v-model="src">
+    <site :src="src"></site>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Site from './components/Site.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
-  }
+    Site
+  },
+  data: () => ({
+    src: "https://www.whatsmybrowser.org/"
+  })
 }
 </script>
 
